@@ -31,6 +31,7 @@ body{
   border-radius:14px;
   padding:20px;
   margin-bottom:20px;
+  backdrop-filter:blur(10px);
 }
 
 .lesson h2{
@@ -55,6 +56,12 @@ textarea{
   padding:12px;
   font-family:Courier New, monospace;
   resize:vertical;
+  outline:none;
+}
+
+textarea:focus{
+  border-color:#a78bfa;
+  box-shadow:0 0 10px rgba(167,139,250,0.4);
 }
 
 button{
@@ -66,6 +73,11 @@ button{
   padding:12px 22px;
   cursor:pointer;
   font-weight:bold;
+  transition:0.2s;
+}
+
+button:hover{
+  transform:translateY(-2px);
 }
 
 .result{
@@ -93,9 +105,35 @@ button{
   font-weight:bold;
 }
 
-pre{
-  background:#111827;
-  padding:12px;
+.code{
+  background:#0b1220;
+  padding:14px;
   border-radius:10px;
   overflow:auto;
+  border:1px solid rgba(99,102,241,0.3);
+  line-height:1.6;
+}
+
+/* syntax colors */
+
+.keyword{
+  color:#c084fc !important;
+  font-weight:bold;
+}
+
+.string{
+  color:#86efac !important;
+}
+
+.number{
+  color:#fb923c !important;
+}
+
+.function{
+  color:#38bdf8 !important;
+}
+
+.comment{
+  color:#64748b !important;
+  font-style:italic;
 }
